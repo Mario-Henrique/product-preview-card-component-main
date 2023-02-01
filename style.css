@@ -1,0 +1,145 @@
+/* ### Primary
+
+- Dark cyan: hsl(158, 36%, 37%)
+- Cream: hsl(30, 38%, 92%)
+
+### Neutral
+
+- Very dark blue: hsl(212, 21%, 14%)
+- Dark grayish blue: hsl(228, 12%, 48%)
+- White: hsl(0, 0%, 100%) */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root{
+    --fonteTitulo: Fraunces, serif;
+    --fonteTexto: Montserrat, sans-serif;
+
+    --cor0: hsl(158, 36%, 37%);
+    --cor1: hsl(30, 38%, 92%);
+    --cor2: hsl(212, 21%, 14%);
+    --cor3: hsl(228, 12%, 48%);
+    --cor4: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+}
+
+body{
+    background-color: hsl(30, 38%, 92%);
+    font-size: 14px;
+}
+
+main{
+    margin: auto;
+    height: 88.5vh;
+}
+
+#card{
+    margin: auto;
+    margin-top: 15px;
+    width: 270px;
+
+    background-color: #fff;
+
+    border-radius: 6px;
+}
+
+.item{
+    padding: 15px;
+    font-family: var(--fonteTexto);
+}
+
+    .item h1{
+        font: 1.8em/1em var(--fonteTitulo);
+        padding: 10px 0;
+    }
+
+.itemName{
+    font: .8em var(--fonteTexto);
+    letter-spacing: 3px;
+    color: var(--cor3);
+    text-transform: uppercase;
+}
+
+.description{
+    font: .8em var(--fonteTexto);
+    color: var(--cor3);
+    margin-bottom: 15px;
+}
+
+.price{
+    font: bolder 1.6em var(--fonteTitulo);
+    color: var(--cor0);
+}
+
+    .price del{
+        margin-left: 15px;
+
+        font: normal .5em var(--fonteTexto);
+        vertical-align: middle;
+    }
+
+.button{
+    margin: 15px 0;
+    padding: 10px;
+
+    background-color: var(--cor0);
+    text-align: center;
+    color: var(--cor4);
+    font-weight: bold;
+
+    border-radius: 6px;
+}
+
+    .button img{
+        vertical-align: text-top;
+        margin-right: 5px;
+    }
+
+    .button:hover{
+        cursor: pointer;
+        background-color: var(--cor2);
+    }
+
+.imgCard{
+    width: 100%;
+    height: 30%;
+
+    border-radius: 6px 6px 0 0;
+}
+
+footer {
+    margin-top: 15px;
+    padding: 15px;
+
+    background-color: black;
+    color: #fff;
+    font-size: 11px; text-align: center;
+}
+    footer a { 
+        text-decoration: none;
+        color: hsl(30, 38%, 92%); 
+    }
+
+        footer a:hover{
+            text-decoration: underline;
+        }
+
+/* Configuração para Desktop (Resolução acima de 600px) */
+@media only screen and (min-width: 600px){
+    .imgCard{
+        width: 100%;
+        height: 100%;
+
+        border-radius: 6px 0 0 6px;
+    }
+
+    #card{
+        display: grid;
+        width: 420px;
+        
+        grid-template-columns: 50% 50%;
+    }
+}
