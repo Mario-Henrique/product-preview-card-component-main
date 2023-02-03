@@ -32,12 +32,14 @@ body{
 }
 
 main{
-    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     height: 88.5vh;
 }
 
 #card{
-    margin: auto;
     margin-top: 15px;
     width: 270px;
 
@@ -73,6 +75,10 @@ main{
     font: bolder 1.6em var(--fonteTitulo);
     color: var(--cor0);
 }
+
+    .price strong{
+        vertical-align: middle;
+    }
 
     .price del{
         margin-left: 15px;
@@ -127,8 +133,8 @@ footer {
             text-decoration: underline;
         }
 
-/* Configuração para Desktop (Resolução acima de 600px) */
-@media only screen and (min-width: 600px){
+/* Configuração para Desktop (Resolução acima de 720px) */
+@media only screen and (min-width: 720px){
     .imgCard{
         width: 100%;
         height: 100%;
